@@ -1,0 +1,5 @@
+name: 'Duels'
+main: 'com.mixinpowered.network.duels.Duels'
+description: 'A plugin for the duels server.'
+version: '0.0.0-SNAPSHOT'
+api-version: '1.21.3'

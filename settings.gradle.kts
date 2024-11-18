@@ -1,2 +1,2 @@
 rootProject.name = "network"
-include("lib")
+include("duels", "lib", "proxy")
