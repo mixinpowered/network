@@ -1,13 +1,11 @@
 package com.mixinpowered.network.lib.registry;
 
 import com.mixinpowered.network.lib.board.Group;
-import lombok.Getter;
 import org.bukkit.scoreboard.Team;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 public class GroupRegistry implements Registry<Group> {
     private static GroupRegistry instance;
     private final List<Group> groups;
@@ -32,6 +30,10 @@ public class GroupRegistry implements Registry<Group> {
                 .filter(group -> group.getTeam() == team)
                 .findFirst()
                 .orElse(null);
+    }
+
+    public List<Group> getGroups() {
+        return groups;
     }
 
     public static GroupRegistry getInstance() {

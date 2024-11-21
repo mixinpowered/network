@@ -1,8 +1,5 @@
 package com.mixinpowered.network.lib.builder;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -13,8 +10,6 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.Map;
 
-@Setter
-@Getter
 public class Menu implements InventoryHolder {
     private Inventory inventory;
     private Component title;
@@ -67,6 +62,18 @@ public class Menu implements InventoryHolder {
     public Menu build() {
         items.forEach((slot, item) -> inventory.setItem(slot, item.getStack()));
         return this;
+    }
+
+    public int getRows() {
+        return rows;
+    }
+
+    public Map<Integer, Stack> getItems() {
+        return items;
+    }
+
+    public Component getTitle() {
+        return title;
     }
 
     @Override

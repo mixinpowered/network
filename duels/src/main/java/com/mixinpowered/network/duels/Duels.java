@@ -10,12 +10,10 @@ import com.mixinpowered.network.lib.session.Session;
 import io.papermc.paper.command.brigadier.Commands;
 import io.papermc.paper.plugin.lifecycle.event.LifecycleEventManager;
 import io.papermc.paper.plugin.lifecycle.event.types.LifecycleEvents;
-import lombok.Getter;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Duels extends JavaPlugin implements Minigame {
-    @Getter
     private static Duels instance;
 
     @Override
@@ -54,5 +52,9 @@ public class Duels extends JavaPlugin implements Minigame {
     @Override
     public void ending(Session session) {
 
+    }
+
+    public static Duels getInstance() {
+        return instance;
     }
 }

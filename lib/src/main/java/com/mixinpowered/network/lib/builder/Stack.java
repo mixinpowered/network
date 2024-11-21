@@ -1,8 +1,6 @@
 package com.mixinpowered.network.lib.builder;
 
 import com.mixinpowered.network.lib.registry.StackRegistry;
-import lombok.Getter;
-import lombok.Setter;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 import net.kyori.adventure.text.format.TextDecoration;
@@ -15,8 +13,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
 
-@Getter
-@Setter
 public class Stack {
     private final Material material;
     private final ItemStack stack;
@@ -58,6 +54,26 @@ public class Stack {
     public Stack onInteract(Consumer<Player> consumer) {
         this.interactConsumer = consumer;
         return this;
+    }
+
+    public ItemStack getStack() {
+        return stack;
+    }
+
+    public ItemMeta getMeta() {
+        return meta;
+    }
+
+    public Consumer<Player> getClickConsumer() {
+        return clickConsumer;
+    }
+
+    public Consumer<Player> getInteractConsumer() {
+        return interactConsumer;
+    }
+
+    public Material getMaterial() {
+        return material;
     }
 
     public Stack build() {

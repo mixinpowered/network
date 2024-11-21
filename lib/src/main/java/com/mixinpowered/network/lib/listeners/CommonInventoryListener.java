@@ -14,8 +14,6 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitScheduler;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.net.http.WebSocket;
-
 public class CommonInventoryListener implements Listener {
     private BukkitTask updateTask;
 

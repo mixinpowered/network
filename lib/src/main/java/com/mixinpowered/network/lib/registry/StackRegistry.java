@@ -1,13 +1,11 @@
 package com.mixinpowered.network.lib.registry;
 
 import com.mixinpowered.network.lib.builder.Stack;
-import lombok.Getter;
 import org.bukkit.inventory.ItemStack;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
 public class StackRegistry implements Registry<Stack> {
     private static StackRegistry instance;
     private final List<Stack> items;
@@ -32,6 +30,10 @@ public class StackRegistry implements Registry<Stack> {
                 .filter(item -> item.getStack().equals(stack))
                 .findFirst()
                 .orElse(null);
+    }
+
+    public List<Stack> getItems() {
+        return items;
     }
 
     public static StackRegistry getInstance() {

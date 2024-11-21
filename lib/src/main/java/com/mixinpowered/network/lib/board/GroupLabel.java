@@ -1,10 +1,8 @@
 package com.mixinpowered.network.lib.board;
 
-import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;
 
-@Getter
 public enum GroupLabel {
     OWNER("OWNER", NamedTextColor.GOLD, true),
     ADMIN("ADMIN", NamedTextColor.DARK_RED, true),
@@ -40,5 +38,17 @@ public enum GroupLabel {
                 .append(Component.text(name, color))
                 .append(Component.text("]", NamedTextColor.DARK_GRAY))
                 .appendSpace();
+    }
+
+    public NamedTextColor getColor() {
+        return color;
+    }
+
+    public boolean isPermanent() {
+        return permanent;
+    }
+
+    public String getName() {
+        return name;
     }
 }

@@ -1,6 +1,5 @@
 package com.mixinpowered.network.lib.session;
 
-import lombok.Getter;
 import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -9,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Getter
 public class Session {
     private final Minigame minigame;
     private final List<UUID> playersUuids;
