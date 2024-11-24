@@ -2,7 +2,7 @@ package com.mixinpowered.network.lib.api.json;
 
 public record PlayerJson(
         String uuid,
-        String groupLabel,
+        String group,
         String groupExpiresAt,
         String joinedAt,
         String lastSeenAt

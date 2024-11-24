@@ -1,12 +1,10 @@
 package com.mixinpowered.network.lib.spawn;
 
-import lombok.Getter;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 
-@Getter
 public class SpawnPoint {
     private World world;
     private final int x;
@@ -48,5 +46,29 @@ public class SpawnPoint {
 
     public void spawnEntity(Entity entity) {
         entity.spawnAt(getSpawnPoint());
+    }
+
+    public World getWorld() {
+        return world;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getPitch() {
+        return pitch;
+    }
+
+    public int getYaw() {
+        return yaw;
+    }
+
+    public int getZ() {
+        return z;
+    }
+
+    public int getY() {
+        return y;
     }
 }
