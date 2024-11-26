@@ -4,3 +4,4 @@ plugins {
 
 rootProject.name = "network"
 include("lib")
+include("proxy")
